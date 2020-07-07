@@ -34,7 +34,7 @@
 int incomingByte[13];
 
 //Es muss nur empfangen werden
-SoftwareSerial mySerial(3, 99); // RX, TX
+SoftwareSerial mySerial(0, 99); // RX, TX
 
 void setup()
 {
@@ -43,7 +43,6 @@ void setup()
   //Messung mit Oszi hat gezeigt, das 32 Bit Daten in 40 ms übertragen werden.
   //Das entspricht 800 baud. SoftwareSerial kennt 600, 1200 und 2400 baud. 2400 ist 800 x 3 (Überraschung :D)
   mySerial.begin(2400);
-
 
   // JVC Pin als Ausgang festlegen
   pinMode(JVC_REMOTE_PIN, OUTPUT); 
